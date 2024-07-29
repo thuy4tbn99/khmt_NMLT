@@ -1,21 +1,58 @@
 #include<iostream>
 #include<iomanip>
 using namespace std;
+
+int cong (int &x){
+    x = x+1;
+    return x;
+}
+
+int luontravebon(){
+    return 4;
+}
+
+int sum(int a, int b){
+    int tong = a+b;
+    return tong;
+}
+
+int cong2(int x){
+    x = x+1;
+    return x;
+}
+
+int cong(int &x){
+    x = x+1;
+    return x;
+}
+
+int tong_1(int x, int &y){
+    x = x+3;
+    y = y+1;
+    return x+y;
+}
+
+void doicho(int &x, int &y){
+    int tmp;
+    tmp = x;
+    x = y;
+    y = tmp;
+}
+
 int main(){
     // tim loi sai
-    int n;
-    cin>>n;
-    float a[n];
-    float max1 = a[0];
-    float min1 =a[0];
-    for (int i=0;i<n;i++){
-        cin>>a[i];
-    }
-    for (int i=0;i<n;i++){
-        if (a[i]>max1) { max1 =a[i];}
-    }
-    for (int i=0;i<n;i++){
-        if (a[i]<min1) {min1=a[i];}
-    }
-    cout<<fixed<<setprecision(2)<<max1<<" "<<min1;
+    int tuan = 4;
+    int thuy=3;
+    doicho(tuan, thuy);
+    cout << thuy;
+
+//    cong2(tuan);
+
+
+
+
+//    cout << y << endl;
+//    int z = luontravebon();
+//    cout << z;
+//    cout << cong(x);
 }
