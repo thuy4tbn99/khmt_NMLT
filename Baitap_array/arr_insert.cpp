@@ -11,6 +11,7 @@ int main(){
     int pos, value;
     cin >> value >> pos;
 
+    /*
     //C1
     pos = pos -1;
 
@@ -30,7 +31,7 @@ int main(){
     }
 
     // C2
-    #include<iostream>
+#include<iostream>
 using namespace std;
 int main(){
     int a[1006];
@@ -50,20 +51,20 @@ int main(){
     for (int i=0;i<=n;i++){
         cout<<a[i]<<" ";
     }
+*/
+//     C2
+    int new_a[n+1]; // 6=5+1
+    for (int i=0; i<pos_convert_to_i; i++){
+        new_a[i] = a[i];
+    }
+    new_a[2] = value;
+    for(int i=pos_convert_to_i+1; i<n+1; i++){
+        new_a[i] = a[i-1];
+    }
 
-    // C2
-//    int new_a[n+1]; // 6=5+1
-//    for (int i=0; i<pos_convert_to_i; i++){
-//        new_a[i] = a[i];
-//    }
-//    new_a[2] = value;
-//    for(int i=pos_convert_to_i+1; i<n+1; i++){
-//        new_a[i] = a[i-1];
-//    }
-//
-//    for(int i=0; i<n+1; i++){
-//        cout << new_a[i] << " ";
-//    }
+    for(int i=0; i<n+1; i++){
+        cout << new_a[i] << " ";
+    }
     return 0;
 }
 
