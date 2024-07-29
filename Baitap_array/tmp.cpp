@@ -1,58 +1,27 @@
-#include<iostream>
-#include<iomanip>
+#include <iostream>
 using namespace std;
 
-int cong (int &x){
-    x = x+1;
-    return x;
-}
-
-int luontravebon(){
-    return 4;
-}
-
-int sum(int a, int b){
-    int tong = a+b;
-    return tong;
-}
-
-int cong2(int x){
-    x = x+1;
-    return x;
-}
-
-int cong(int &x){
-    x = x+1;
-    return x;
-}
-
-int tong_1(int x, int &y){
-    x = x+3;
-    y = y+1;
-    return x+y;
-}
-
-void doicho(int &x, int &y){
-    int tmp;
-    tmp = x;
-    x = y;
-    y = tmp;
-}
-
-int main(){
-    // tim loi sai
-    int tuan = 4;
-    int thuy=3;
-    doicho(tuan, thuy);
-    cout << thuy;
-
-//    cong2(tuan);
-
-
-
-
-//    cout << y << endl;
-//    int z = luontravebon();
-//    cout << z;
-//    cout << cong(x);
+int main()
+{
+   int n1 = 12345678897777776565443256;
+   int n2 = 12333412312321321321321;
+   cout << n;
+   return 0;
+//   int thuong=1; // phep chia n cho 10
+//   int dem_csc = 0, dem_csl = 0;
+//   while(thuong){
+//        thuong = n/10; //
+//        int sodu = n%10;    //5
+//        if (sodu%2==0){
+//            dem_csc+=1;
+//        }
+//        else{
+//            dem_csl+=1;
+//        }
+//        n = thuong;
+//        //cau lenh ben trong
+//        // cap nhat dieu kien
+//
+//   }
+//    cout << dem_csc << endl << dem_csl;
 }
