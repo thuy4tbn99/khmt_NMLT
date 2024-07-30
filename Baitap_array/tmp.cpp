@@ -3,25 +3,28 @@ using namespace std;
 
 int main()
 {
-   int n1 = 12345678897777776565443256;
-   int n2 = 12333412312321321321321;
-   cout << n;
-   return 0;
-//   int thuong=1; // phep chia n cho 10
-//   int dem_csc = 0, dem_csl = 0;
-//   while(thuong){
-//        thuong = n/10; //
-//        int sodu = n%10;    //5
-//        if (sodu%2==0){
-//            dem_csc+=1;
-//        }
-//        else{
-//            dem_csl+=1;
-//        }
-//        n = thuong;
-//        //cau lenh ben trong
-//        // cap nhat dieu kien
-//
-//   }
-//    cout << dem_csc << endl << dem_csl;
+   int n=5;
+   int a[n] = {1,2,3,1,1};
+
+
+   int count_dt = 0;
+   int b[n];
+   for (int i=0; i<n; i++){
+        b[i] = -9999;
+   }
+
+   int count_unique = 0;
+   for (int i=0; i<n; i++){
+        bool check = true;
+        for(int j=0; j<n; j++){
+            if (a[i] == b[j]) check = false;
+        }
+        if(check){
+            b[i] = a[i];
+            count_unique+=1;
+        }
+   }
+   for(int i=0; i<count_unique; i++){
+        cout << b[i] << " ";
+   }
 }
