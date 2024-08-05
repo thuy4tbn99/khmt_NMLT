@@ -11,12 +11,12 @@ int main(){
         cin >> ptr[i];
     }
     cout << ptr << " "  << ptr+1 << endl;
-    cout << *ptr << endl;
-    cout << *(ptr+1) << endl;
+//    cout << *ptr << endl;
+//    cout << *(ptr+1) << endl;
 
-    for (int i=0; i<n; i++){
-        cout << ptr[i];
-    }
+//    for (int i=0; i<n; i++){
+//        cout << ptr[i];
+//    }
 
     return 0;
 }
