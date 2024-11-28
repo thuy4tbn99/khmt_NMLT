@@ -1,27 +1,20 @@
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
-int main()
-{
-    int n;
-    cin >> n;
-    int a[n];
-    for (int i=0; i<n; i++){
-        cin >> a[i];
+int main() {
+    double a1, a2, a3;
+    cin >> a1 >> a2 >> a3;
+
+    double a_min;
+    a_min = a2;
+    if(a_min > a1){
+        a_min = a1;
     }
-    for (int i=0; i<n; i++){
-        if (a[i]%3==0){
-            for (int j=i+1; j<n; j++){
-                if (a[j]%3==0 && a[j] > a[i]){
-                    int tmp = a[j];
-                    a[j] = a[i];
-                    a[i] = tmp;
-                }
-            }
-        }
+    if(a_min > a3){
+        a_min = a3;
     }
-    for (int i=0; i<n; i++){
-        cout << a[i] << " ";
-    }
+    cout << a_min << endl;
+
+    return 0;
 }

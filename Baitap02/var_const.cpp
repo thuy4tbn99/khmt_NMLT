@@ -1,18 +1,17 @@
 #include <iostream>
 
-
 using namespace std;
 
 int main(){
-    /*
     int x1;
+    x1 = 5;
     cout << x1 << endl;
 
 
     int x2 = 2;
     cout << x2 << endl;
 
-
+/*
     float x3;
     cout << x3 << endl;
 
@@ -50,7 +49,7 @@ int main(){
 
     // Conventional Errors
 //    double x
-    double x y=3;
+    double xy=3;
 
     return 0;
 }
