@@ -1,25 +1,29 @@
 #include <iostream>
 using namespace std;
 
-// follow as https://vuontoanblog.blogspot.com/2012/09/pascal-triangle.html
-
-// calculate C(n, k)
- int binomialCoefficient(int n, int k) {
-    int result = 1;
-    for (int i = 0; i < k; ++i) {
-        result *= (n - i);
-        result /= (i + 1);
-    }
-    return result;
-}
-
 int main() {
-    int n;
-    cin >> n;
+    int m, n;
+    cout << "Nhap m va n: ";
+    cin >> m >> n;
 
-    for (int i = 0; i <= n; ++i) {
-        for (int j = 0; j <= i; ++j) {
-            cout << binomialCoefficient(i, j) << " ";
+    // Tìm tổng số số nguyên
+    int total = n - m + 1;
+
+    // In dòng đầu tiên chứa các số không là bội số của 5
+    int count = total % 5; // Số lượng số dư
+    int current = m;
+
+    if (count > 0) {
+        for (int i = 0; i < count; ++i) {
+            cout << current++ << " ";
+        }
+        cout << endl;
+    }
+
+    // In các dòng còn lại, mỗi dòng chứa đúng 5 số
+    while (current <= n) {
+        for (int i = 0; i < 5 && current <= n; ++i) {
+            cout << current++ << " ";
         }
         cout << endl;
     }
