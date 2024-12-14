@@ -7,7 +7,7 @@ int main(){
     // tong tu 1->10
     int sum = 0;
     for (int i=1; i<=10; i++){
-        if(i==5 || i==7){
+        if (i==5||i==7){
             continue;
         }
         sum = sum + i;

@@ -19,18 +19,18 @@ int main(){
     cout << sum;
 */
 
-    int n;
-    cin >> n;
-    int x[n];
-    x[0] = 0;
-    x[1] = 1;
-    for(int i=2; i<n; i++){
-        x[i] = x[i-1] + x[i-2];
-    }
-
-    for(int i=0; i<n; i++){
-        cout << x[i] << " ";
-    }
+//    int n;
+//    cin >> n;
+//    int x[n];
+//    x[0] = 0;
+//    x[1] = 1;
+//    for(int i=2; i<n; i++){
+//        x[i] = x[i-1] + x[i-2];
+//    }
+//
+//    for(int i=0; i<n; i++){
+//        cout << x[i] << " ";
+//    }
 
 
     // fibo

@@ -1,16 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
 int main() {
-    int m, n;
-    cin >> m >> n;
-    int spt = n-m+1;
-    int du = spt%5;
+    int n;
+    cin >> n;
+    int cs_max = -1;
+    while(true){
+        if(n==0){
+            break;
+        }
 
-    for (int i=m; i<m+du; i++){
-        cout << i << " ";
+        int cs = n%10;
+        n = n/10;
+        if(cs > cs_max){
+            cs_max = cs;
+        }
     }
-    cout << endl;
+    cout << cs_max;
+
+	return 0;
+
 }

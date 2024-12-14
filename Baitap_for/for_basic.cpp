@@ -26,8 +26,8 @@ int main(){
 //    for(int i=0; i<5; i=i+2){
 //        cout << i << endl;
 //    }
-//
-//    for (int i=5; i>0; i--){
+////
+//    for (int i=4; i>=0; i--){
 //        cout << i << endl;
 //    }
 
