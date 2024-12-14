@@ -1,5 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
+
 
 int main() {
     int n;
@@ -19,5 +20,6 @@ int main() {
     cout << cs_max;
 
 	return 0;
+
 
 }
