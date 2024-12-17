@@ -5,10 +5,7 @@ using namespace std;
 
 int tong(int a, int b){
     int sum = a+b;
-    if  (sum%2==0){
-        return 1;
-    }
-
+    return sum;
 }
 
 void hello(){
@@ -68,7 +65,7 @@ int main(){
 //    hello();
 
 //    float bien1 = 4.3;
-//    bien1 = increase(bien1);
+//    increase_ver3(bien1);
 //    cout << bien1;
 
 //    int var1 = 3, var2 = 4

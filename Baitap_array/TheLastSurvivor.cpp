@@ -19,10 +19,10 @@ void xuatmang(string a[], int n){
 }
 int main(){
     int n;cin >>n;
-    char x;
     int k; cin >> k;cin.ignore();
     string a[n];
     nhapmang(a, n);
+
     int vtb=0;
     while(true){
         vtb = (vtb +k)%n;
