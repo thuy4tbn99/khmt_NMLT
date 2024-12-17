@@ -3,23 +3,29 @@ using namespace std;
 
 
 int main() {
-    int n;
-    cin >> n;
-    int cs_max = -1;
-    while(true){
-        if(n==0){
-            break;
-        }
+    int m, n;
+    cout << "Nhap m va n: ";
+    cin >> m >> n;
 
-        int cs = n%10;
-        n = n/10;
-        if(cs > cs_max){
-            cs_max = cs;
+    // Tìm tổng số số nguyên
+    int total = n - m + 1;
+
+    // In dòng đầu tiên chứa các số không là bội số của 5
+    int count = total % 5; // Số lượng số dư
+    int current = m;
+
+    if (count > 0) {
+        for (int i = 0; i < count; ++i) {
+            cout << current++ << " ";
         }
+        cout << endl;
     }
-    cout << cs_max;
 
-	return 0;
+    // In các dòng còn lại, mỗi dòng chứa đúng 5 số
+    while (current <= n) {
+        for (int i = 0; i < 5 && current <= n; ++i) {
+            cout << current++ << " ";
+
 
 
 }

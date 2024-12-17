@@ -12,47 +12,58 @@ struct StudentList{
 	struct Student* head;
 };
 
+
 struct StudentList* createStudentList(){
-    struct StudentList* newList = malloc(sizeof(struct StudentList));
-    newList->head = NULL;
-    return newList;
+    struct StudentList* tmp;
+    tmp = malloc(sizeof(struct StudentList)); // cap phat bo nho
+//    tmp->head = malloc(sizeof(struct Student));
+    tmp->head = NULL;
+    return tmp;
 };
 
-void insertStudent(struct StudentList* stlist, char* n_name, float n_grade){
-    struct Student* n_student = malloc(sizeof(struct Student)); // cap phat bo nho cho n_student
-    n_student->name = malloc((strlen(n_name))+1); // bao gom ca ky tu ket thuc '\0'
-    strcpy(n_student->name, n_name);
-    n_student->grade= n_grade;
-    n_student->next = stlist->head;
-    stlist->head=n_student;
+void insertStudent(struct StudentList* linh, char* name, float grade){
+    // tao student moi
+    struct Student* new_student;
+    new_student = malloc(sizeof(struct Student));
+    new_student->name = malloc(strlen(name)+1);
+    strcpy(new_student->name, name);
+    new_student->grade = grade;
+
+    new_student->next = malloc(sizeof(struct Student));
+    new_student->next = linh->head;
+    linh->head = new_student;
 }
 
 void destroy(struct StudentList* stlist){
-    struct Student* current = stlist->head;
-    while(current !=NULL){
-        struct Student* tmp = current;
-        current = current->next;
-//        printf("Name: %s, Grade: %.2f\n", tmp->name, tmp->grade);
-        free(tmp->name);
-        free(tmp);
-//        printf("After Name: %s, Grade: %.2f\n", tmp->name, tmp->grade);
-    }
-    free(stlist);
+
 }
 
 int main(){
 //    printf("%d", sizeof(struct StudentList));
-    struct StudentList *studentList = createStudentList();
+    struct StudentList* studentList;
+    studentList = createStudentList();
     insertStudent(studentList, "Alice", 3.7); //list = Alice
     insertStudent(studentList, "Bob", 3.2);
+    insertStudent(studentList, "Linh", 3.8);
 
-
-
-    struct Student* current = studentList->head;
-    while (current != NULL) {
-        printf("Name: %s, Grade: %.2f\n", current->name, current->grade);
-        current = current->next;
+    float sumGrade = 0;
+    struct Student* curr = studentList->head;
+    while(curr!=NULL){
+        sumGrade += curr-> grade;
+        curr = curr->next;
     }
-    destroy(studentList);
+    printf("%f", sumGrade);
+
+
+
+
+//    struct Student* current = studentList->head;
+//    while (current != NULL) {
+//        printf("Name: %s, Grade: %.2f\n", current->name, current->grade);
+//        current = current->next;
+//    }
+
+
+//    destroy(studentList);
     return 0;
 }

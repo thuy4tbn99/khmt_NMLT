@@ -1,37 +1,15 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-
-struct Student{
-	char* name;
-	float grade;
-	struct Student* next;
-};
-
-struct StudentList{
-	struct Student* head;
-};
-
-
-
+int add(int x, int y){
+    int sum = x+y;
+    return sum;
+}
 
 int main(){
-    struct StudentList* stlist = malloc(sizeof(struct StudentList));
-    struct Student* tmp = malloc(sizeof(struct Student));
-    tmp->name = strdup("John Doe");
-    tmp->grade = 4.3;
-    tmp ->next = NULL;
-    stlist->head =tmp;
-
-    struct Student* current = stlist->head;
-    while(current !=NULL){
-        struct Student* tmp = current;
-        current = current->next;
-        free(tmp->name);
-        free(tmp);
-    }
-    free(stlist);
-    stlist->head = NULL;
+    int a=3, b=2;
+    int sum;
+    sum = add(a,b);
+    printf("%d", sum);
     return 0;
 }
