@@ -4,9 +4,9 @@
 using namespace std;
 
 int main(){
-//    for (int i=0; i<5; i++){
-//        cout << i << endl;
-//    }
+    for (int i=0; i<5; i++){
+        cout << i << endl;
+    }
 
     // convert to while
     int i =0;
@@ -14,7 +14,7 @@ int main(){
         cout << i << endl;
         i++;
     }
-
+    int i=0;
     while(true){
         if (i>=5){
             break;

@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 int main() {
     int m, n;
     cout << "Nhap m va n: ";
@@ -24,9 +25,7 @@ int main() {
     while (current <= n) {
         for (int i = 0; i < 5 && current <= n; ++i) {
             cout << current++ << " ";
-        }
-        cout << endl;
-    }
 
-    return 0;
+
+
 }
