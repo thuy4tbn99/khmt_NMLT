@@ -1,25 +1,27 @@
-#include<bits/stdc++.h>
-
+#include<iostream>
+#include<iomanip>
 using namespace std;
 
-int main(){
-    int m,n;
-    cin >> m >> n;
-    int a[m][n];
+int main() {
+    float height[5];
+    for (int i = 0; i < 5; ++i) {
+        cin >> height[i];
+    }
 
-    for (int i=0; i<m ; i++){
-        for (int j=0; j<n; j++){
-            cin >> a[i][j];
+    float max = height[0], min = height[0], total = 0;
+
+    for (int i = 0; i < 5; ++i) {
+        if (height[i] > max) {
+            max = height[i];
         }
-    }
-    int cnt =0;
-    int k; cin >> k;
-    for (int i=0; i<m; i++){
-        for (int j=0; j<n; j++){
-            if (a[i][j] > k) cnt++;
+        if (height[i] < min) {
+            min = height[i];
         }
+        total += height[i];
     }
-    cout << cnt;
+
+    float average = total / 5.0;
+
+    cout << fixed << setprecision(2) << max << " " << min << " " << average << endl;
     return 0;
 }
-

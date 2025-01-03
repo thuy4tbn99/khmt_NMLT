@@ -17,8 +17,8 @@ int main(){
 //    cout << *ptr << endl;
 //
 //    // cin, cout with pointer
-//    int* ptr2 = new int;
-//    cout << ptr2 << " " << *ptr2 << endl;
+    int* ptr2 = new int;
+    cout << ptr2 << " " << *ptr2 << endl;
 //    cin >> *ptr2;
 //    cout << ptr2 << " " << *ptr2 << endl;
 

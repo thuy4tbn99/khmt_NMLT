@@ -53,9 +53,9 @@ void sortBySum(int **a, int n){
     }
 
 
-//    sort(result.begin(), result.end());
+
     sort(result.begin(), result.end(), [](const pair<int, int>& a, const pair<int, int>& b) {
-        return (a.first + a.second) < (b.first + b.second);  // So sánh tổng chỉ số
+        return (a.first + a.second) < (b.first + b.second);
     });
 
 
@@ -85,10 +85,5 @@ int main () {
 //        sortBySum(a, n);
         cout << endl << endl;
     }
-//    findSubMatrix(a, n);
-
-
-
-
 }
 
